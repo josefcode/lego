@@ -1,0 +1,146 @@
+.navbar {
+  background-color: gray;
+  height: 100vh;
+
+  &__nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+    color: map-get($colors, "text-1");
+    height: 80px;
+    background-color: rgba(map-get($colors, "background-1"), 0.5);
+  }
+
+  &__logo {
+    width: 48px;
+    height: 48px;
+  }
+
+  &__navIcons {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    gap: 3rem;
+  }
+
+  &__close {
+    margin-left: 5rem;
+  }
+
+  &__navCategory {
+    button {
+      background-color: transparent;
+      border: none;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 0.2rem;
+      span {
+        @include typography(label-small);
+      }
+    }
+  }
+
+  &__logoCategory {
+    width: 40px;
+    height: 33px;
+  }
+
+  &__links {
+    width: 100%;
+    display: flex;
+    list-style: none;
+    width: 996px;
+    gap: 3rem;
+    white-space: nowrap;
+
+    li {
+      cursor: pointer;
+      @include typography(common-p);
+      &:hover {
+        color: map-get($colors, "brand-blue");
+      }
+    }
+  }
+
+  &__icons {
+    list-style: none;
+    display: flex;
+  }
+
+  &__linkContainer {
+    display: flex;
+    flex-direction: column;
+    width: 72px;
+    align-items: center;
+    gap: 5px;
+
+    img {
+      width: 24px;
+      height: 24px;
+      @include typography(label-small);
+    }
+
+    span {
+      @include typography(label-small);
+      cursor: default;
+      &:hover {
+        color: map-get($colors, "brand-blue");
+      }
+    }
+  }
+
+  .video {
+    display: flex;
+    align-items: end;
+    gap: 5rem;
+    justify-content: center;
+    height: 80%;
+
+    &__title {
+      @include typography(desktop);
+      color: map-get($colors, background-1);
+      width: 1340px;
+      cursor: default;
+    }
+
+    &__iconsWrapper {
+      display: flex;
+      align-items: end;
+      gap: 2rem;
+      svg,
+      rect,
+      path {
+        &:hover {
+          fill: map-get($colors, brand-blue);
+          stroke: map-get($colors, brand-blue);
+        }
+      }
+    }
+
+    &__downloadIcon {
+      width: 64px;
+      height: 64px;
+    }
+  }
+
+  &__scrollWrapper {
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    gap: 2rem;
+    margin-top: 3rem;
+
+    span {
+      @include typography(p-large-regular);
+      color: map-get($colors, "background-1");
+      cursor: default;
+    }
+    img {
+      padding-inline-end: 2rem;
+      width: 24px;
+      height: 24px;
+    }
+  }
+}

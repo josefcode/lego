@@ -1,0 +1,14 @@
+footer {
+  border-top: 1px solid map-get($colors, background-1);
+  height: 81px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  p {
+    text-align: center;
+    @include typography(p-small);
+    color: map-get($colors, text-3);
+    width: 567px;
+  }
+}

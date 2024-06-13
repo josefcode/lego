@@ -1,0 +1,145 @@
+.gift-container {
+  padding-block-start: 5rem;
+
+  header {
+    padding-inline: 10rem;
+    display: flex;
+    justify-content: space-between;
+    padding-block-end: 4px;
+  }
+
+  &__card {
+    display: flex;
+    &.red {
+      border-top: 1px solid map-get($colors, red-light);
+    }
+    &.green {
+      border-top: 1px solid map-get($colors, brand-green);
+    }
+    &.blue {
+      border-top: 1px solid map-get($colors, brand-blue);
+    }
+    &.gray {
+      border-top: 1px solid map-get($colors, background-3);
+    }
+    &.dark {
+      border-top: 1px solid map-get($colors, text-1);
+    }
+    &.pink {
+      border-top: 1px solid map-get($colors, brand-pink);
+    }
+    &.yellow {
+      border-top: 1px solid map-get($colors, brand-yellow);
+    }
+    &.darkRed {
+      border-top: 1px solid map-get($colors, brand-red);
+    }
+
+    .cardInfo {
+      display: flex;
+
+      flex-direction: column;
+
+      padding: 10rem;
+      gap: 2rem;
+      width: 100%;
+      .cardTitle {
+        @include typography(h3);
+        width: 586px;
+        // margin-block-end: 2rem;
+      }
+      .cardDesc {
+        width: 586px;
+      }
+    }
+
+    .cardImage {
+      img {
+        width: 940px;
+        height: 528px;
+      }
+    }
+  }
+
+  &__secondCard {
+    display: flex;
+    // border-bottom: 1px solid map-get($colors, red-light);
+    &.red {
+      border-bottom: 1px solid map-get($colors, red-light);
+    }
+    &.green {
+      border-bottom: 1px solid map-get($colors, brand-green);
+    }
+    &.blue {
+      border-bottom: 1px solid map-get($colors, brand-blue);
+    }
+    &.gray {
+      border-bottom: 1px solid map-get($colors, background-3);
+    }
+    &.dark {
+      border-bottom: 1px solid map-get($colors, text-1);
+    }
+    &.pink {
+      border-bottom: 1px solid map-get($colors, brand-pink);
+    }
+    &.yellow {
+      border-bottom: 1px solid map-get($colors, brand-yellow);
+    }
+    &.darkRed {
+      border-bottom: 1px solid map-get($colors, brand-red);
+    }
+    .cardInfo {
+      text-align: end;
+      display: flex;
+      flex-direction: column;
+      padding: 10rem 10rem 0 10rem;
+      gap: 2rem;
+      width: 100%;
+      .cardTitle {
+        @include typography(h3);
+        width: 586px;
+        // margin-block-end: 2rem;
+      }
+      .cardDesc {
+        width: 586px;
+      }
+    }
+
+    button {
+      @extend .button;
+      align-self: end;
+      margin-inline-end: 3rem;
+    }
+    .cardImage {
+      img {
+        width: 940px;
+        height: 100%;
+      }
+    }
+  }
+
+  @include media-md {
+    header {
+      padding-inline: 10rem;
+      flex-direction: column;
+      width: 100%;
+      align-items: center;
+    }
+
+    &__card {
+      flex-direction: column;
+    }
+
+    .cardInfo {
+      padding: 0;
+      width: 100%;
+    }
+    &__secondCard {
+      flex-direction: column;
+
+      .cardDesc {
+        width: 100%;
+      }
+    }
+  }
+}
