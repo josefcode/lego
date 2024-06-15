@@ -256,7 +256,6 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  overflow: auto;
 }
 .fullscreen-menu__sidebar .sidebarIcons {
   display: flex;
@@ -347,13 +346,15 @@
   .fullscreen-menu {
     flex-direction: column;
     width: 100%;
-    height: -moz-fit-content;
-    height: fit-content;
+    height: 100%;
     top: -250%;
+    overflow: auto;
   }
   .fullscreen-menu__sidebar {
-    width: unset;
+    box-shadow: none;
+    width: 100%;
     align-items: start;
+    overflow: unset;
   }
   .fullscreen-menu__sidebar .sidebarIcons {
     padding-inline: 1rem;
@@ -382,11 +383,13 @@
     width: 16px;
   }
   .fullscreen-menu__themes .themeList {
-    width: 100%;
-    padding: 0 0 0 1rem;
+    padding-inline-start: 0;
+  }
+  .fullscreen-menu__themes .themeList li {
+    padding-inline-start: 1rem;
   }
   .fullscreen-menu__grid {
-    width: unset;
+    width: 100%;
     grid-template-columns: 1fr;
   }
   .fullscreen-menu__grid div {

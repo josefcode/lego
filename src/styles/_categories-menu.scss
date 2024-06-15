@@ -20,7 +20,6 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    overflow: auto;
 
     .sidebarIcons {
       display: flex;
@@ -120,14 +119,15 @@
   @include media-md {
     flex-direction: column;
     width: 100%;
-    height: fit-content;
+    height: 100%;
     top: -250%;
+    overflow: auto;
 
     &__sidebar {
-      width: unset;
+      box-shadow: none;
+      width: 100%;
       align-items: start;
-      // padding-inline: 1rem;
-
+      overflow: unset;
       .sidebarIcons {
         padding-inline: 1rem;
       }
@@ -157,13 +157,16 @@
       }
 
       .themeList {
-        width: 100%;
-        padding: 0 0 0 1rem;
+        padding-inline-start: 0;
+
+        li {
+          padding-inline-start: 1rem;
+        }
       }
     }
 
     &__grid {
-      width: unset;
+      width: 100%;
       grid-template-columns: 1fr;
 
       div {
