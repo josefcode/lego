@@ -4,10 +4,16 @@
   header {
     padding-inline: 10rem;
     display: flex;
+    align-items: center;
     justify-content: space-between;
     padding-block-end: 4px;
+
+    p {
+      @include typography(common-p);
+    }
   }
 
+  //style of cards
   &__card {
     display: flex;
     &.red {
@@ -119,26 +125,138 @@
   }
 
   @include media-md {
+    padding-block-start: 2rem;
     header {
-      padding-inline: 10rem;
+      padding-inline: 0;
       flex-direction: column;
-      width: 100%;
-      align-items: center;
+      align-items: unset;
+
+      .underline {
+        &.red {
+          border-top: 1px solid map-get($colors, red-light);
+        }
+        &.green {
+          border-top: 1px solid map-get($colors, brand-green);
+        }
+        &.blue {
+          border-top: 1px solid map-get($colors, brand-blue);
+        }
+        &.gray {
+          border-top: 1px solid map-get($colors, background-3);
+        }
+        &.dark {
+          border-top: 1px solid map-get($colors, text-1);
+        }
+        &.pink {
+          border-top: 1px solid map-get($colors, brand-pink);
+        }
+        &.yellow {
+          border-top: 1px solid map-get($colors, brand-yellow);
+        }
+        &.darkRed {
+          border-top: 1px solid map-get($colors, brand-red);
+        }
+
+        margin-block: 10px;
+      }
+
+      h1 {
+        padding-inline-start: 1rem;
+        @include typography(p-regular-mobile);
+      }
+
+      p {
+        text-align: end;
+        padding-inline-end: 1rem;
+        @include typography(p-small);
+        line-height: 20px;
+      }
     }
 
+    //style of cards
     &__card {
+      padding-top: 1rem;
       flex-direction: column;
+      &.red,
+      &.green,
+      &.blue,
+      &.gray,
+      &.dark,
+      &.pink,
+      &.yellow,
+      &.darkRed {
+        border-top: none;
+
+        .cardImage {
+          width: 100%;
+          height: 168px;
+          object-fit: cover;
+          order: 1;
+        }
+        .cardInfo {
+          padding-inline: 1rem;
+          padding-block: 1rem;
+          order: 2;
+          gap: 0;
+          text-align: unset;
+          width: unset;
+
+          .cardTitle {
+            @include typography(h3-mobile);
+            width: unset;
+          }
+
+          .cardDesc {
+            @include typography(p-large-mobile);
+            width: 100%;
+            margin-block-end: 1rem;
+          }
+        }
+      }
     }
 
-    .cardInfo {
-      padding: 0;
-      width: 100%;
-    }
     &__secondCard {
+      padding-top: 1rem;
       flex-direction: column;
+      &.red,
+      &.green,
+      &.blue,
+      &.gray,
+      &.dark,
+      &.pink,
+      &.yellow,
+      &.darkRed {
+        border-top: none;
 
-      .cardDesc {
-        width: 100%;
+        .cardImage {
+          width: 100%;
+          height: 168px;
+          object-fit: cover;
+          order: 1;
+        }
+        .cardInfo {
+          padding-inline: 1rem;
+          padding-block: 1rem;
+          order: 2;
+          gap: 0;
+          text-align: unset;
+          width: unset;
+
+          .cardTitle {
+            @include typography(h3-mobile);
+            width: unset;
+            // // margin-block-end: 2rem;
+          }
+
+          .cardDesc {
+            @include typography(p-large-mobile);
+            width: 100%;
+            margin-block-end: 1rem;
+          }
+        }
+      }
+      button {
+        align-self: start;
       }
     }
   }

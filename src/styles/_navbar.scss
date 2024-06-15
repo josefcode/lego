@@ -1,15 +1,16 @@
 .navbar {
-  background-color: gray;
   height: 100vh;
 
   &__nav {
     display: flex;
-    justify-content: space-between;
+    position: fixed;
+    width: 100%;
+    justify-content: space-evenly;
     align-items: center;
-    padding: 0 20px;
     color: map-get($colors, "text-1");
     height: 80px;
-    background-color: rgba(map-get($colors, "background-1"), 0.5);
+    background-color: rgba(map-get($colors, background-1), 0.5);
+    backdrop-filter: blur(5px);
   }
 
   &__logo {
@@ -21,7 +22,7 @@
     list-style: none;
     display: flex;
     align-items: center;
-    gap: 3rem;
+    gap: 2rem;
   }
 
   &__close {
@@ -48,10 +49,8 @@
   }
 
   &__links {
-    width: 100%;
     display: flex;
     list-style: none;
-    width: 996px;
     gap: 3rem;
     white-space: nowrap;
 
@@ -67,6 +66,10 @@
   &__icons {
     list-style: none;
     display: flex;
+  }
+
+  &__linkLogo {
+    padding-bottom: 5px;
   }
 
   &__linkContainer {
@@ -93,11 +96,21 @@
 
   .video {
     display: flex;
-    align-items: end;
+    flex-direction: column;
     gap: 5rem;
-    justify-content: center;
-    height: 80%;
 
+    .videoInfos {
+      display: flex;
+      justify-content: center;
+      gap: 9rem;
+      margin-top: -25rem;
+    }
+
+    &__frame {
+      background-color: map-get($colors, text-3);
+      width: 100%;
+      height: 100vh;
+    }
     &__title {
       @include typography(desktop);
       color: map-get($colors, background-1);
@@ -109,14 +122,6 @@
       display: flex;
       align-items: end;
       gap: 2rem;
-      svg,
-      rect,
-      path {
-        &:hover {
-          fill: map-get($colors, brand-blue);
-          stroke: map-get($colors, brand-blue);
-        }
-      }
     }
 
     &__downloadIcon {
@@ -141,6 +146,66 @@
       padding-inline-end: 2rem;
       width: 24px;
       height: 24px;
+    }
+  }
+
+  @include media-md {
+    height: 100%;
+    &__nav {
+      gap: 2rem;
+    }
+
+    .video {
+      padding-bottom: 1rem;
+      gap: 1rem;
+
+      &__frame {
+        background-color: map-get($colors, text-3);
+        height: 375px;
+        margin-top: 80px;
+      }
+
+      &__title {
+        width: fit-content;
+        @include typography(h1-mobile);
+        color: map-get($colors, text-1);
+        padding-left: 1rem;
+        order: 2;
+      }
+
+      &__iconsWrapper {
+        align-self: end;
+        gap: 1rem;
+        order: 1;
+        margin-top: -6rem;
+        margin-bottom: 2rem;
+        padding-inline-end: 1rem;
+        .soundBtn {
+          width: 64px;
+          height: 64px;
+        }
+        .downloadBtn {
+          width: 48px;
+          height: 48px;
+        }
+      }
+
+      .videoInfos {
+        flex-direction: column;
+        margin-top: 0;
+        gap: 0;
+      }
+    }
+
+    &__scrollWrapper {
+      display: none;
+    }
+    &__links {
+      display: none;
+    }
+
+    .search {
+      display: none;
     }
   }
 }

@@ -26,14 +26,14 @@ export const GiftCards = ({
             <PrimaryButton text="View details" endIcon={arrowRight} />
           </div>
           <div className="cardImage">
-            <img src={startImage} alt={startImageAlt} />
+            <img className="cardImage" src={startImage} alt={startImageAlt} />
           </div>
         </div>
       ) : null}
       {showEndCard ? (
         <div className={`gift-container__secondCard ${borderBottomColor}`}>
           <div className="cardImage">
-            <img src={endImage} alt={endImageAlt} />
+            <img className="cardImage" src={endImage} alt={endImageAlt} />
           </div>
           <div className="cardInfo">
             <h2 className="cardTitle">{endcardTitle}</h2>

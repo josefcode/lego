@@ -1,7 +1,7 @@
 @import "./variables";
 
 .button {
-  height: 20px;
+  // height: 20px;
   border-radius: 37px;
   border: 1px solid map-get($colors, "text-1");
   background-color: transparent;
@@ -9,7 +9,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 18px 20px;
+  padding: 18px 40px;
   gap: 24px;
   transition: background-color 0.3s ease;
   width: fit-content;
@@ -25,8 +25,8 @@
   }
 
   &__icon {
-    width: 16px; // Assuming the icon size is 16x16px
-    height: 16px;
+    width: 24px; // Assuming the icon size is 16x16px
+    height: 24px;
 
     &:hover {
       color: map-get($colors, "brand-blue");

@@ -22,6 +22,7 @@ const GiftTravelSection = ({
       <section>
         <header>
           <h1>{giftTitle}</h1>
+          <div className={`underline ${borderTopColor}`}></div>
           <p>{giftDesc}</p>
         </header>
         <GiftCards

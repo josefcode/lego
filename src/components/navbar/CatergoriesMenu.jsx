@@ -1,24 +1,24 @@
 import React from "react";
 import brandIcon from "../../../public/brandLogo.svg";
-import imageOne from "../../../public/menuimage/1.png";
-import imageTwo from "../../../public/menuimage/2.png";
-import imageThree from "../../../public/menuimage/3.png";
-import imageFour from "../../../public/menuimage/4.png";
-import imageFive from "../../../public/menuimage/5.png";
-import imageSix from "../../../public/menuimage/6.png";
-import imageSeven from "../../../public/menuimage/7.png";
-import imageEight from "../../../public/menuimage/8.png";
-import imageNine from "../../../public/menuimage/9.png";
+import architecture from "../../../public/menuimage/architecture.png";
+import city from "../../../public/menuimage/city.png";
+import creator from "../../../public/menuimage/creator.png";
+import dots from "../../../public/menuimage/dots.png";
+import duplo from "../../../public/menuimage/duplo.png";
+import friends from "../../../public/menuimage/friends.png";
+import ideas from "../../../public/menuimage/ideas.png";
+import minifigures from "../../../public/menuimage/minifigures.png";
+import technic from "../../../public/menuimage/technic.png";
 import closeIcon from "../../../public/menuimage/closeIcon.png";
 import shopcardIcon from "../../../public/shoppingbag.png";
 import searchIcon from "../../../public/search.png";
 import messageIcon from "../../../public/message.png";
 
-const FullscreenMenu = ({ show, onClose }) => {
+const CatergoriesMenu = ({ show, onClose }) => {
   return (
     <div className={`fullscreen-menu ${show ? "show" : ""}`}>
       <div className="fullscreen-menu__sidebar">
-        <div>
+        <div className="sidebarIcons">
           <img
             className="fullscreen-menu__logo"
             src={brandIcon} // Reusing the logo from the navbar
@@ -60,9 +60,9 @@ const FullscreenMenu = ({ show, onClose }) => {
         <div className="fullscreen-menu__themes">
           <div className="themeWrapper">
             <div className="line"></div>
-            <h3>Themes</h3>
+            <p>Themes</p>
           </div>
-          <ul>
+          <ul className="themeList">
             <li>Gifting</li>
             <li>Travel</li>
             <li>Adults Welcome</li>
@@ -75,37 +75,36 @@ const FullscreenMenu = ({ show, onClose }) => {
         </div>
       </div>
       <div className="fullscreen-menu__grid">
-        {/* Add your category images here */}
         <div>
-          <img src={imageOne} alt="Architecture" />
+          <img src={architecture} alt="Architecture" />
         </div>
         <div>
-          <img src={imageTwo} alt="City" />
+          <img src={city} alt="City" />
         </div>
         <div>
-          <img src={imageThree} alt="Creator" />
+          <img src={creator} alt="Creator" />
         </div>
         <div>
-          <img src={imageFour} alt="Dots" />
+          <img src={dots} alt="Dots" />
         </div>
         <div>
-          <img src={imageFive} alt="Duplo" />
+          <img src={duplo} alt="Duplo" />
         </div>
         <div>
-          <img src={imageSix} alt="Friends" />
+          <img src={friends} alt="Friends" />
         </div>
         <div>
-          <img src={imageSeven} alt="Ideas" />
+          <img src={ideas} alt="Ideas" />
         </div>
         <div>
-          <img src={imageEight} alt="Minifigures" />
+          <img src={minifigures} alt="Minifigures" />
         </div>
         <div>
-          <img src={imageNine} alt="Technic" />
+          <img src={technic} alt="Technic" />
         </div>
       </div>
     </div>
   );
 };
 
-export default FullscreenMenu;
+export default CatergoriesMenu;
