@@ -74,22 +74,22 @@
     .cardInfo {
       display: flex;
       flex-direction: column;
-      align-items: center;
+      // align-items: center;
       justify-content: center;
       gap: 2rem;
       width: 100%;
+      padding-inline: 11.5rem;
       .cardTitle {
         @include typography(h3);
-        width: 586px;
       }
-      .cardDesc {
-        width: 586px;
+
+      div {
+        width: 100%;
       }
 
       button {
         @extend .button;
-        align-self: start;
-        margin-inline-start: 11.5rem;
+        // align-self: start;
       }
     }
 
@@ -156,19 +156,27 @@
     .cardInfo {
       text-align: end;
       display: flex;
-      align-items: center;
       justify-content: center;
       flex-direction: column;
-
       gap: 2rem;
       width: 100%;
+
       .cardTitle {
         @include typography(h3);
-        width: 586px;
+        padding-inline: 11.5rem;
+        text-align: right;
       }
+
       .cardDesc {
-        width: 586px;
+        padding-inline: 11.5rem;
       }
+
+      div {
+        width: 100%;
+        display: flex;
+        justify-content: end;
+      }
+
       button {
         @extend .button;
         align-self: end;
@@ -275,6 +283,9 @@
           button {
             margin: 0;
           }
+          div {
+            width: 100%;
+          }
         }
       }
     }
@@ -310,15 +321,17 @@
             @include typography(h3-mobile);
             width: unset;
             text-align: left;
+            padding: 0;
           }
 
           .cardDesc {
             @include typography(p-large-mobile);
             width: 100%;
             margin-block-end: 1rem;
+            padding: 0;
           }
-          button {
-            margin-right: 9rem;
+          div {
+            width: 100%;
           }
         }
       }

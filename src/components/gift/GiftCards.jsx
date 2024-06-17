@@ -27,7 +27,9 @@ export const GiftCards = ({
           <div className="cardInfo">
             <h2 className="cardTitle">{startcardTitle}</h2>
             <p className="cardDesc">{startcardDesc}</p>
-            <PrimaryButton text="View details" endIcon={ArrowForwardIcon} />
+            <div>
+              <PrimaryButton text="View details" endIcon={ArrowForwardIcon} />
+            </div>
           </div>
           <div className="cardImage">
             <img className="cardImage" src={startImage} alt={startImageAlt} />
@@ -44,7 +46,9 @@ export const GiftCards = ({
           <div className="cardInfo">
             <h2 className="cardTitle">{endcardTitle}</h2>
             <p className="cardDesc">{endcardDesc}</p>
-            <PrimaryButton text="View details" endIcon={ArrowForwardIcon} />
+            <div>
+              <PrimaryButton text="View details" endIcon={ArrowForwardIcon} />
+            </div>
           </div>
         </div>
       ) : null}
