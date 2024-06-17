@@ -1,4 +1,6 @@
-.button, .gift-container__secondCard .cardInfo button, .gift-container__card .cardInfo button {
+.button,
+.gift-container__secondCard .cardInfo button,
+.gift-container__card .cardInfo button {
   border-radius: 37px;
   border: 1px solid #000000;
   background-color: transparent;
@@ -12,11 +14,15 @@
   width: -moz-fit-content;
   width: fit-content;
 }
-.button:hover, .gift-container__secondCard .cardInfo button:hover, .gift-container__card .cardInfo button:hover {
+.button:hover,
+.gift-container__secondCard .cardInfo button:hover,
+.gift-container__card .cardInfo button:hover {
   border-color: #006cb7;
   color: #006cb7;
 }
-.button:hover .button__icon, .gift-container__secondCard .cardInfo button:hover .button__icon, .gift-container__card .cardInfo button:hover .button__icon {
+.button:hover .button__icon,
+.gift-container__secondCard .cardInfo button:hover .button__icon,
+.gift-container__card .cardInfo button:hover .button__icon {
   transition: transform 0.3s ease;
   transform: translateX(5px);
   fill: #006cb7;
@@ -44,7 +50,8 @@
   height: 80px;
   background-color: rgba(255, 255, 255, 0.5);
   -webkit-backdrop-filter: blur(5px);
-          backdrop-filter: blur(5px);
+  backdrop-filter: blur(5px);
+  z-index: 1000;
 }
 .navbar__logo {
   width: 48px;
@@ -137,7 +144,7 @@
   width: 100%;
   height: 100vh;
   -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
 }
 .navbar .video__title {
   font-size: 80px;
@@ -261,7 +268,7 @@ html {
 
 .fullscreen-menu {
   position: fixed;
-  top: -150%;
+  top: -250%;
   left: 0;
   width: 100%;
   height: 100%;
@@ -697,17 +704,38 @@ html {
     padding-top: 1rem;
     flex-direction: column;
   }
-  .gift-container__card.red, .gift-container__card.green, .gift-container__card.blue, .gift-container__card.gray, .gift-container__card.dark, .gift-container__card.pink, .gift-container__card.yellow, .gift-container__card.darkRed {
+  .gift-container__card.red,
+  .gift-container__card.green,
+  .gift-container__card.blue,
+  .gift-container__card.gray,
+  .gift-container__card.dark,
+  .gift-container__card.pink,
+  .gift-container__card.yellow,
+  .gift-container__card.darkRed {
     border-top: none;
   }
-  .gift-container__card.red .cardImage, .gift-container__card.green .cardImage, .gift-container__card.blue .cardImage, .gift-container__card.gray .cardImage, .gift-container__card.dark .cardImage, .gift-container__card.pink .cardImage, .gift-container__card.yellow .cardImage, .gift-container__card.darkRed .cardImage {
+  .gift-container__card.red .cardImage,
+  .gift-container__card.green .cardImage,
+  .gift-container__card.blue .cardImage,
+  .gift-container__card.gray .cardImage,
+  .gift-container__card.dark .cardImage,
+  .gift-container__card.pink .cardImage,
+  .gift-container__card.yellow .cardImage,
+  .gift-container__card.darkRed .cardImage {
     width: 100%;
     height: 168px;
     -o-object-fit: cover;
-       object-fit: cover;
+    object-fit: cover;
     order: 1;
   }
-  .gift-container__card.red .cardInfo, .gift-container__card.green .cardInfo, .gift-container__card.blue .cardInfo, .gift-container__card.gray .cardInfo, .gift-container__card.dark .cardInfo, .gift-container__card.pink .cardInfo, .gift-container__card.yellow .cardInfo, .gift-container__card.darkRed .cardInfo {
+  .gift-container__card.red .cardInfo,
+  .gift-container__card.green .cardInfo,
+  .gift-container__card.blue .cardInfo,
+  .gift-container__card.gray .cardInfo,
+  .gift-container__card.dark .cardInfo,
+  .gift-container__card.pink .cardInfo,
+  .gift-container__card.yellow .cardInfo,
+  .gift-container__card.darkRed .cardInfo {
     padding-inline: 1rem;
     padding-block: 1rem;
     order: 2;
@@ -715,36 +743,78 @@ html {
     text-align: unset;
     width: unset;
   }
-  .gift-container__card.red .cardInfo .cardTitle, .gift-container__card.green .cardInfo .cardTitle, .gift-container__card.blue .cardInfo .cardTitle, .gift-container__card.gray .cardInfo .cardTitle, .gift-container__card.dark .cardInfo .cardTitle, .gift-container__card.pink .cardInfo .cardTitle, .gift-container__card.yellow .cardInfo .cardTitle, .gift-container__card.darkRed .cardInfo .cardTitle {
+  .gift-container__card.red .cardInfo .cardTitle,
+  .gift-container__card.green .cardInfo .cardTitle,
+  .gift-container__card.blue .cardInfo .cardTitle,
+  .gift-container__card.gray .cardInfo .cardTitle,
+  .gift-container__card.dark .cardInfo .cardTitle,
+  .gift-container__card.pink .cardInfo .cardTitle,
+  .gift-container__card.yellow .cardInfo .cardTitle,
+  .gift-container__card.darkRed .cardInfo .cardTitle {
     font-size: 24px;
     font-weight: 400;
     width: unset;
   }
-  .gift-container__card.red .cardInfo .cardDesc, .gift-container__card.green .cardInfo .cardDesc, .gift-container__card.blue .cardInfo .cardDesc, .gift-container__card.gray .cardInfo .cardDesc, .gift-container__card.dark .cardInfo .cardDesc, .gift-container__card.pink .cardInfo .cardDesc, .gift-container__card.yellow .cardInfo .cardDesc, .gift-container__card.darkRed .cardInfo .cardDesc {
+  .gift-container__card.red .cardInfo .cardDesc,
+  .gift-container__card.green .cardInfo .cardDesc,
+  .gift-container__card.blue .cardInfo .cardDesc,
+  .gift-container__card.gray .cardInfo .cardDesc,
+  .gift-container__card.dark .cardInfo .cardDesc,
+  .gift-container__card.pink .cardInfo .cardDesc,
+  .gift-container__card.yellow .cardInfo .cardDesc,
+  .gift-container__card.darkRed .cardInfo .cardDesc {
     font-size: 18px;
     font-weight: 300;
     line-height: 33px;
     width: 100%;
     margin-block-end: 1rem;
   }
-  .gift-container__card.red .cardInfo button, .gift-container__card.green .cardInfo button, .gift-container__card.blue .cardInfo button, .gift-container__card.gray .cardInfo button, .gift-container__card.dark .cardInfo button, .gift-container__card.pink .cardInfo button, .gift-container__card.yellow .cardInfo button, .gift-container__card.darkRed .cardInfo button {
+  .gift-container__card.red .cardInfo button,
+  .gift-container__card.green .cardInfo button,
+  .gift-container__card.blue .cardInfo button,
+  .gift-container__card.gray .cardInfo button,
+  .gift-container__card.dark .cardInfo button,
+  .gift-container__card.pink .cardInfo button,
+  .gift-container__card.yellow .cardInfo button,
+  .gift-container__card.darkRed .cardInfo button {
     margin: 0;
   }
   .gift-container__secondCard {
     padding-top: 1rem;
     flex-direction: column;
   }
-  .gift-container__secondCard.red, .gift-container__secondCard.green, .gift-container__secondCard.blue, .gift-container__secondCard.gray, .gift-container__secondCard.dark, .gift-container__secondCard.pink, .gift-container__secondCard.yellow, .gift-container__secondCard.darkRed {
+  .gift-container__secondCard.red,
+  .gift-container__secondCard.green,
+  .gift-container__secondCard.blue,
+  .gift-container__secondCard.gray,
+  .gift-container__secondCard.dark,
+  .gift-container__secondCard.pink,
+  .gift-container__secondCard.yellow,
+  .gift-container__secondCard.darkRed {
     border-top: none;
   }
-  .gift-container__secondCard.red .cardImage, .gift-container__secondCard.green .cardImage, .gift-container__secondCard.blue .cardImage, .gift-container__secondCard.gray .cardImage, .gift-container__secondCard.dark .cardImage, .gift-container__secondCard.pink .cardImage, .gift-container__secondCard.yellow .cardImage, .gift-container__secondCard.darkRed .cardImage {
+  .gift-container__secondCard.red .cardImage,
+  .gift-container__secondCard.green .cardImage,
+  .gift-container__secondCard.blue .cardImage,
+  .gift-container__secondCard.gray .cardImage,
+  .gift-container__secondCard.dark .cardImage,
+  .gift-container__secondCard.pink .cardImage,
+  .gift-container__secondCard.yellow .cardImage,
+  .gift-container__secondCard.darkRed .cardImage {
     width: 100%;
     height: 168px;
     -o-object-fit: cover;
-       object-fit: cover;
+    object-fit: cover;
     order: 1;
   }
-  .gift-container__secondCard.red .cardInfo, .gift-container__secondCard.green .cardInfo, .gift-container__secondCard.blue .cardInfo, .gift-container__secondCard.gray .cardInfo, .gift-container__secondCard.dark .cardInfo, .gift-container__secondCard.pink .cardInfo, .gift-container__secondCard.yellow .cardInfo, .gift-container__secondCard.darkRed .cardInfo {
+  .gift-container__secondCard.red .cardInfo,
+  .gift-container__secondCard.green .cardInfo,
+  .gift-container__secondCard.blue .cardInfo,
+  .gift-container__secondCard.gray .cardInfo,
+  .gift-container__secondCard.dark .cardInfo,
+  .gift-container__secondCard.pink .cardInfo,
+  .gift-container__secondCard.yellow .cardInfo,
+  .gift-container__secondCard.darkRed .cardInfo {
     padding-inline: 1rem;
     padding-block: 1rem;
     order: 2;
@@ -752,20 +822,41 @@ html {
     text-align: unset;
     width: unset;
   }
-  .gift-container__secondCard.red .cardInfo .cardTitle, .gift-container__secondCard.green .cardInfo .cardTitle, .gift-container__secondCard.blue .cardInfo .cardTitle, .gift-container__secondCard.gray .cardInfo .cardTitle, .gift-container__secondCard.dark .cardInfo .cardTitle, .gift-container__secondCard.pink .cardInfo .cardTitle, .gift-container__secondCard.yellow .cardInfo .cardTitle, .gift-container__secondCard.darkRed .cardInfo .cardTitle {
+  .gift-container__secondCard.red .cardInfo .cardTitle,
+  .gift-container__secondCard.green .cardInfo .cardTitle,
+  .gift-container__secondCard.blue .cardInfo .cardTitle,
+  .gift-container__secondCard.gray .cardInfo .cardTitle,
+  .gift-container__secondCard.dark .cardInfo .cardTitle,
+  .gift-container__secondCard.pink .cardInfo .cardTitle,
+  .gift-container__secondCard.yellow .cardInfo .cardTitle,
+  .gift-container__secondCard.darkRed .cardInfo .cardTitle {
     font-size: 24px;
     font-weight: 400;
     width: unset;
     text-align: left;
   }
-  .gift-container__secondCard.red .cardInfo .cardDesc, .gift-container__secondCard.green .cardInfo .cardDesc, .gift-container__secondCard.blue .cardInfo .cardDesc, .gift-container__secondCard.gray .cardInfo .cardDesc, .gift-container__secondCard.dark .cardInfo .cardDesc, .gift-container__secondCard.pink .cardInfo .cardDesc, .gift-container__secondCard.yellow .cardInfo .cardDesc, .gift-container__secondCard.darkRed .cardInfo .cardDesc {
+  .gift-container__secondCard.red .cardInfo .cardDesc,
+  .gift-container__secondCard.green .cardInfo .cardDesc,
+  .gift-container__secondCard.blue .cardInfo .cardDesc,
+  .gift-container__secondCard.gray .cardInfo .cardDesc,
+  .gift-container__secondCard.dark .cardInfo .cardDesc,
+  .gift-container__secondCard.pink .cardInfo .cardDesc,
+  .gift-container__secondCard.yellow .cardInfo .cardDesc,
+  .gift-container__secondCard.darkRed .cardInfo .cardDesc {
     font-size: 18px;
     font-weight: 300;
     line-height: 33px;
     width: 100%;
     margin-block-end: 1rem;
   }
-  .gift-container__secondCard.red .cardInfo button, .gift-container__secondCard.green .cardInfo button, .gift-container__secondCard.blue .cardInfo button, .gift-container__secondCard.gray .cardInfo button, .gift-container__secondCard.dark .cardInfo button, .gift-container__secondCard.pink .cardInfo button, .gift-container__secondCard.yellow .cardInfo button, .gift-container__secondCard.darkRed .cardInfo button {
+  .gift-container__secondCard.red .cardInfo button,
+  .gift-container__secondCard.green .cardInfo button,
+  .gift-container__secondCard.blue .cardInfo button,
+  .gift-container__secondCard.gray .cardInfo button,
+  .gift-container__secondCard.dark .cardInfo button,
+  .gift-container__secondCard.pink .cardInfo button,
+  .gift-container__secondCard.yellow .cardInfo button,
+  .gift-container__secondCard.darkRed .cardInfo button {
     margin-right: 9rem;
   }
 }
@@ -784,4 +875,4 @@ footer p {
   line-height: 15px;
   color: #808080;
   width: 567px;
-}/*# sourceMappingURL=main.css.map */
+}

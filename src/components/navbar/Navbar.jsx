@@ -163,18 +163,6 @@ export const Navbar = () => {
         </ul>
       </nav>
       <div className="video">
-        {/* <iframe
-          className="video__frame"
-          width="560"
-          height="315"
-          src="https://www.youtube.com/embed/gvnvaQE2JQY?si=bbjqsRbHDD8gm39r&autoplay=1&mute=1&controls=0&modestbranding=1&disablekb=1&iv_load_policy=3"
-          title="YouTube video player"
-          frameborder="0"
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-          referrerpolicy="strict-origin-when-cross-origin"
-          allowfullscreen
-        ></iframe> */}
-
         <video
           className="video__frame"
           part="video"
@@ -186,8 +174,6 @@ export const Navbar = () => {
           preload="metadata"
           loop
         />
-
-        {/* <div className="video__frame"></div> */}
         <div className="videoInfos">
           <h1 className="video__title">
             <div>Welcome to the</div>

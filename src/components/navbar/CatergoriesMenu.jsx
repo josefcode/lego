@@ -28,7 +28,7 @@ const CatergoriesMenu = ({ show, onClose }) => {
             className="fullscreen-menu__close-icon"
             src={closeIcon}
             alt="Close"
-            onClick={onClose}
+            onClick={() => console.log("clicke")}
           />
         </div>
         <ul className="fullscreen-menu__nav">
