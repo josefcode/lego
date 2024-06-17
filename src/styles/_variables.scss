@@ -184,6 +184,13 @@ $typography: (
   justify-content: center;
 }
 
+// Flex centering placeholder
+%flex-columns {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
 // Media query mixin
 @mixin media-md {
   @media screen and (max-width: 600px) {

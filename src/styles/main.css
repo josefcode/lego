@@ -1,3 +1,9 @@
+.fullscreen-menu__sidebar, .navbar__navCategory button {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
 .button, .gift-container__secondCard .cardInfo button, .gift-container__card .cardInfo button {
   border-radius: 37px;
   border: 1px solid #000000;
@@ -63,9 +69,6 @@
 .navbar__navCategory button {
   background-color: transparent;
   border: none;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
   gap: 0.2rem;
 }
 .navbar__navCategory button span {
@@ -278,9 +281,6 @@ html {
   width: 510px;
   box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
   padding-block-start: 1rem;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
 }
 .fullscreen-menu__sidebar .sidebarIcons {
   display: flex;
@@ -468,6 +468,9 @@ html {
   }
   .fullscreen-menu__grid div {
     border: 1px solid #bbdcf5;
+  }
+  .fullscreen-menu__grid div:hover {
+    background-image: none;
   }
 }
 
