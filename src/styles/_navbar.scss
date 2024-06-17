@@ -127,18 +127,18 @@
     .soundBtn {
       width: 80px;
       height: 80px;
-      background-image: url("../../public/soundButton.svg");
+      background-image: url("../../../soundButton.svg");
       &:hover {
-        background-image: url("../../public/hoverSound.png");
+        background-image: url("../../../hoverSound.png");
       }
     }
 
     .downloadBtn {
       width: 64px;
       height: 64px;
-      background-image: url("../../public/download.svg");
+      background-image: url("../../../download.svg");
       &:hover {
-        background-image: url("../../public/downloadHover.png");
+        background-image: url("../../../downloadHover.png");
       }
     }
   }

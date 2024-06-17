@@ -34,4 +34,17 @@
     width: 24px;
     height: 24px;
   }
+
+  @include media-md {
+    &:hover {
+      border-color: unset;
+      color: unset;
+
+      .button__icon {
+        transition: none;
+        transform: none;
+        fill: none;
+      }
+    }
+  }
 }
