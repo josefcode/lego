@@ -2,7 +2,7 @@
   padding-block-start: 5rem;
 
   header {
-    padding-inline: 10rem;
+    padding-inline: 12rem;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -14,6 +14,11 @@
   }
 
   //style of cards
+  &__cards {
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+  }
   &__card {
     display: flex;
     &.red {
@@ -41,35 +46,63 @@
       border-top: 1px solid map-get($colors, brand-red);
     }
 
+    &.single-red {
+      border-bottom: 1px solid map-get($colors, red-light);
+    }
+    &.single-green {
+      border-bottom: 1px solid map-get($colors, brand-green);
+    }
+    &.single-blue {
+      border-bottom: 1px solid map-get($colors, brand-blue);
+    }
+    &.single-gray {
+      border-bottom: 1px solid map-get($colors, background-3);
+    }
+    &.single-dark {
+      border-bottom: 1px solid map-get($colors, text-1);
+    }
+    &.single-pink {
+      border-bottom: 1px solid map-get($colors, brand-pink);
+    }
+    &.single-yellow {
+      border-bottom: 1px solid map-get($colors, brand-yellow);
+    }
+    &.single-darkRed {
+      border-bottom: 1px solid map-get($colors, brand-red);
+    }
+
     .cardInfo {
       display: flex;
-
       flex-direction: column;
-
-      padding: 10rem;
+      align-items: center;
+      justify-content: center;
       gap: 2rem;
       width: 100%;
       .cardTitle {
         @include typography(h3);
         width: 586px;
-        // margin-block-end: 2rem;
       }
       .cardDesc {
         width: 586px;
+      }
+
+      button {
+        @extend .button;
+        align-self: start;
+        margin-inline-start: 11.5rem;
       }
     }
 
     .cardImage {
       img {
         width: 940px;
-        height: 528px;
+        height: 100%;
       }
     }
   }
 
   &__secondCard {
     display: flex;
-    // border-bottom: 1px solid map-get($colors, red-light);
     &.red {
       border-bottom: 1px solid map-get($colors, red-light);
     }
@@ -94,28 +127,55 @@
     &.darkRed {
       border-bottom: 1px solid map-get($colors, brand-red);
     }
+
+    &.single-red {
+      border-top: 1px solid map-get($colors, red-light);
+    }
+    &.single-green {
+      border-top: 1px solid map-get($colors, brand-green);
+    }
+    &.single-blue {
+      border-top: 1px solid map-get($colors, brand-blue);
+    }
+    &.single-gray {
+      border-top: 1px solid map-get($colors, background-3);
+    }
+    &.single-dark {
+      border-top: 1px solid map-get($colors, text-1);
+    }
+    &.single-pink {
+      border-top: 1px solid map-get($colors, brand-pink);
+    }
+    &.single-yellow {
+      border-top: 1px solid map-get($colors, brand-yellow);
+    }
+    &.single-darkRed {
+      border-top: 1px solid map-get($colors, brand-red);
+    }
+
     .cardInfo {
       text-align: end;
       display: flex;
+      align-items: center;
+      justify-content: center;
       flex-direction: column;
-      padding: 10rem 10rem 0 10rem;
+
       gap: 2rem;
       width: 100%;
       .cardTitle {
         @include typography(h3);
         width: 586px;
-        // margin-block-end: 2rem;
       }
       .cardDesc {
         width: 586px;
       }
+      button {
+        @extend .button;
+        align-self: end;
+        margin-inline-end: 11.5rem;
+      }
     }
 
-    button {
-      @extend .button;
-      align-self: end;
-      margin-inline-end: 3rem;
-    }
     .cardImage {
       img {
         width: 940px;
@@ -176,6 +236,7 @@
     //style of cards
     &__card {
       padding-top: 1rem;
+
       flex-direction: column;
       &.red,
       &.green,
@@ -210,6 +271,9 @@
             @include typography(p-large-mobile);
             width: 100%;
             margin-block-end: 1rem;
+          }
+          button {
+            margin: 0;
           }
         }
       }
@@ -245,7 +309,7 @@
           .cardTitle {
             @include typography(h3-mobile);
             width: unset;
-            // // margin-block-end: 2rem;
+            text-align: left;
           }
 
           .cardDesc {
@@ -253,10 +317,10 @@
             width: 100%;
             margin-block-end: 1rem;
           }
+          button {
+            margin-right: 9rem;
+          }
         }
-      }
-      button {
-        align-self: start;
       }
     }
   }

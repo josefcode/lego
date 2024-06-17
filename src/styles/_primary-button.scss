@@ -1,7 +1,6 @@
 @import "./variables";
 
 .button {
-  // height: 20px;
   border-radius: 37px;
   border: 1px solid map-get($colors, "text-1");
   background-color: transparent;
@@ -17,19 +16,22 @@
   &:hover {
     border-color: map-get($colors, "brand-blue");
     color: map-get($colors, "brand-blue");
+
+    .button__icon {
+      transition: transform 0.3s ease;
+      transform: translateX(5px);
+      fill: map-get($colors, "brand-blue");
+    }
   }
 
   &__text {
     margin-left: 5px;
     margin-right: 5px;
+    text-wrap: nowrap;
   }
 
   &__icon {
-    width: 24px; // Assuming the icon size is 16x16px
+    width: 24px;
     height: 24px;
-
-    &:hover {
-      color: map-get($colors, "brand-blue");
-    }
   }
 }

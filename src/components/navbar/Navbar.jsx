@@ -5,10 +5,8 @@ import searchIcon from "../../../public/search.png";
 import shopcardIcon from "../../../public/shoppingbag.png";
 import messageIcon from "../../../public/message.png";
 import chevronsdown from "../../../public/chevronsdown.png";
-import FullscreenMenu from "./CatergoriesMenu"; // Import the new component
-import shoundbtn from "../../../public/soundButton.svg";
-import downloadBtn from "../../../public/download.svg";
 import CatergoriesMenu from "./CatergoriesMenu";
+import { Link } from "react-scroll";
 
 export const Navbar = () => {
   const [showMenu, setMenu] = useState(false);
@@ -39,14 +37,102 @@ export const Navbar = () => {
         </ul>
 
         <ul className="navbar__links">
-          <li className="navbar__link">Gifting</li>
-          <li className="navbar__link">Travel</li>
-          <li className="navbar__link">Adults Welcome</li>
-          <li className="navbar__link">Art & Home Décor </li>
-          <li className="navbar__link">Space</li>
-          <li className="navbar__link">Pop Culture</li>
-          <li className="navbar__link">Toddlers</li>
-          <li className="navbar__link">Real World Role Playing </li>
+          <li className="navbar__link">
+            <Link
+              activeClass="active"
+              to="Gifting"
+              spy={true}
+              smooth={true}
+              offset={-70}
+              duration={200}
+            >
+              Gifting
+            </Link>
+          </li>
+          <li className="navbar__link">
+            <Link
+              activeClass="active"
+              to="Travel"
+              spy={true}
+              smooth={true}
+              offset={-70}
+              duration={200}
+            >
+              Travel
+            </Link>
+          </li>
+          <li className="navbar__link">
+            <Link
+              activeClass="active"
+              to="Adults welcome"
+              spy={true}
+              smooth={true}
+              offset={-70}
+              duration={200}
+            >
+              Adults welcome
+            </Link>
+          </li>
+          <li className="navbar__link">
+            <Link
+              activeClass="active"
+              to="Art & Home Décor"
+              spy={true}
+              smooth={true}
+              offset={-70}
+              duration={200}
+            >
+              Art & Home Décor
+            </Link>
+          </li>
+          <li className="navbar__link">
+            <Link
+              activeClass="active"
+              to="Space"
+              spy={true}
+              smooth={true}
+              offset={-70}
+              duration={200}
+            >
+              Space
+            </Link>
+          </li>
+          <li className="navbar__link">
+            <Link
+              activeClass="active"
+              to="Pop Culture"
+              spy={true}
+              smooth={true}
+              offset={-70}
+              duration={200}
+            >
+              Pop Culture
+            </Link>
+          </li>
+          <li className="navbar__link">
+            <Link
+              activeClass="active"
+              to="Toddlers"
+              spy={true}
+              smooth={true}
+              offset={-70}
+              duration={200}
+            >
+              Toddlers
+            </Link>
+          </li>
+          <li className="navbar__link">
+            <Link
+              activeClass="active"
+              to="Real World Role Playing"
+              spy={true}
+              smooth={true}
+              offset={-70}
+              duration={200}
+            >
+              Real World Role Playing
+            </Link>
+          </li>
         </ul>
 
         <ul className="navbar__icons">
@@ -77,7 +163,31 @@ export const Navbar = () => {
         </ul>
       </nav>
       <div className="video">
-        <div className="video__frame"></div>
+        {/* <iframe
+          className="video__frame"
+          width="560"
+          height="315"
+          src="https://www.youtube.com/embed/gvnvaQE2JQY?si=bbjqsRbHDD8gm39r&autoplay=1&mute=1&controls=0&modestbranding=1&disablekb=1&iv_load_policy=3"
+          title="YouTube video player"
+          frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          referrerpolicy="strict-origin-when-cross-origin"
+          allowfullscreen
+        ></iframe> */}
+
+        <video
+          className="video__frame"
+          part="video"
+          crossOrigin=""
+          playsInline
+          muted
+          autoPlay
+          src="https://videos.pexels.com/video-files/4961512/4961512-hd_1280_720_25fps.mp4"
+          preload="metadata"
+          loop
+        />
+
+        {/* <div className="video__frame"></div> */}
         <div className="videoInfos">
           <h1 className="video__title">
             <div>Welcome to the</div>
@@ -85,8 +195,8 @@ export const Navbar = () => {
           </h1>
 
           <div className="video__iconsWrapper">
-            <img src={shoundbtn} alt="" className="soundBtn" />
-            <img src={downloadBtn} alt="" className="downloadBtn" />
+            <div className="soundBtn"></div>
+            <div className="downloadBtn"></div>
           </div>
         </div>
       </div>

@@ -2,6 +2,7 @@ import React from "react";
 import { GiftCards } from "./GiftCards";
 
 const GiftTravelSection = ({
+  id,
   showStartCard,
   showEndCard,
   giftTitle,
@@ -16,10 +17,12 @@ const GiftTravelSection = ({
   endcardDesc,
   endImage,
   endImageAlt,
+  setSingleCard,
+  props,
 }) => {
   return (
-    <div className="gift-container">
-      <section>
+    <div className="gift-container" {...props}>
+      <section id={id}>
         <header>
           <h1>{giftTitle}</h1>
           <div className={`underline ${borderTopColor}`}></div>
@@ -38,6 +41,7 @@ const GiftTravelSection = ({
           endcardDesc={endcardDesc}
           endImage={endImage}
           endImageAlt={endImageAlt}
+          setSingleCard={setSingleCard}
         />
       </section>
     </div>

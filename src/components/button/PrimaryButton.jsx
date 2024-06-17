@@ -1,14 +1,24 @@
 import React from "react";
 
-const PrimaryButton = ({ text, endIcon, startIcon, onClick, ...props }) => {
+const PrimaryButton = ({
+  text,
+  endIcon: EndIcon,
+  startIcon: StartIcon,
+  onClick,
+  ...props
+}) => {
   return (
     <button className="button" onClick={onClick} {...props}>
-      {startIcon && (
-        <img className="button__icon" src={startIcon} alt="right arrow icon" />
+      {StartIcon && (
+        <div className="button__icon">
+          <StartIcon />
+        </div>
       )}
       <span className="button__text">{text}</span>
-      {endIcon && (
-        <img className="button__icon" src={endIcon} alt="left arrow icon" />
+      {EndIcon && (
+        <div className="button__icon">
+          <EndIcon />
+        </div>
       )}
     </button>
   );

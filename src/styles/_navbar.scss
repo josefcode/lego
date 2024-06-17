@@ -110,6 +110,7 @@
       background-color: map-get($colors, text-3);
       width: 100%;
       height: 100vh;
+      object-fit: cover;
     }
     &__title {
       @include typography(desktop);
@@ -124,9 +125,22 @@
       gap: 2rem;
     }
 
-    &__downloadIcon {
+    .soundBtn {
+      width: 80px;
+      height: 80px;
+      background-image: url("../../public/soundButton.svg");
+      &:hover {
+        background-image: url("../../public/hoverSound.png");
+      }
+    }
+
+    .downloadBtn {
       width: 64px;
       height: 64px;
+      background-image: url("../../public/download.svg");
+      &:hover {
+        background-image: url("../../public/downloadHover.png");
+      }
     }
   }
 
@@ -180,13 +194,16 @@
         margin-top: -6rem;
         margin-bottom: 2rem;
         padding-inline-end: 1rem;
+
         .soundBtn {
           width: 64px;
           height: 64px;
+          background-size: contain;
         }
         .downloadBtn {
           width: 48px;
           height: 48px;
+          background-size: contain;
         }
       }
 

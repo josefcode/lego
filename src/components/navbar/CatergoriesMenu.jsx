@@ -11,7 +11,7 @@ import minifigures from "../../../public/menuimage/minifigures.png";
 import technic from "../../../public/menuimage/technic.png";
 import closeIcon from "../../../public/menuimage/closeIcon.png";
 import shopcardIcon from "../../../public/shoppingbag.png";
-import searchIcon from "../../../public/search.png";
+import homeIcon from "../../../public/home.png";
 import messageIcon from "../../../public/message.png";
 
 const CatergoriesMenu = ({ show, onClose }) => {
@@ -21,7 +21,7 @@ const CatergoriesMenu = ({ show, onClose }) => {
         <div className="sidebarIcons">
           <img
             className="fullscreen-menu__logo"
-            src={brandIcon} // Reusing the logo from the navbar
+            src={brandIcon}
             alt="The Broadway Brother logo"
           />
           <img
@@ -35,10 +35,12 @@ const CatergoriesMenu = ({ show, onClose }) => {
           <li>
             <img
               className="navbar__linkLogo"
-              src={searchIcon}
+              src={homeIcon}
               alt="The Broadway Brother logo"
             />
-            <span className="navbar__linkText">Contact us</span>
+            <span className="navbar__linkText" onClick={onClose}>
+              Home
+            </span>
           </li>
           <li>
             <img

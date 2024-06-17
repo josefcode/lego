@@ -14,7 +14,7 @@
   }
 
   &__sidebar {
-    width: 600px;
+    width: 510px;
     box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
     padding-block-start: 1rem;
     display: flex;
@@ -24,6 +24,9 @@
     .sidebarIcons {
       display: flex;
       gap: 1rem;
+      width: 100%;
+      align-items: center;
+      padding-left: 15rem;
 
       .fullscreen-menu__close-icon {
         max-width: 48px;
@@ -43,14 +46,38 @@
     list-style: none;
     padding: 0;
     margin: 0;
+    width: 100%;
 
     li {
-      display: flex;
-      gap: 1rem;
+      padding-left: 7rem;
       align-items: center;
+      display: flex;
+      position: relative;
+      align-self: center;
+      padding-block: 9px;
+      gap: 1rem;
+      width: 310px;
       @include typography(h4);
       margin-block-end: 10px;
       cursor: pointer;
+
+      &:before {
+        content: "";
+        position: absolute;
+        top: 0;
+        right: 200%;
+        width: 100%;
+        height: 100%;
+        transition: 0.5s;
+        z-index: -2;
+      }
+
+      &:hover:before {
+        right: 0;
+      }
+      &:before {
+        background: map-get($colors, blue-xlight);
+      }
     }
   }
 
@@ -61,7 +88,7 @@
     width: 100%;
 
     .themeWrapper {
-      width: 280px;
+      width: 220px;
       margin-bottom: 10px;
       display: flex;
       justify-content: center;
@@ -70,6 +97,7 @@
       p {
         @include typography(p-large);
         color: map-get($colors, text-l);
+        padding-inline: 8px;
       }
       .line {
         border-top: 1px solid map-get($colors, text-2);
@@ -78,12 +106,32 @@
     }
     .themeList {
       list-style: none;
-      padding-inline-start: 200px;
 
       li {
-        margin: 5px 0;
-        height: 48px;
         cursor: pointer;
+        padding-inline: 7rem;
+        width: 200px;
+        padding-block: 15px;
+        cursor: pointer;
+        position: relative;
+
+        &:before {
+          content: "";
+          position: absolute;
+          top: 0;
+          right: 200%;
+          width: 100%;
+          height: 100%;
+          transition: 0.5s;
+          z-index: -2;
+        }
+
+        &:hover:before {
+          right: 0;
+        }
+        &:before {
+          background: map-get($colors, blue-xlight);
+        }
       }
     }
   }
@@ -136,8 +184,14 @@
     &__nav {
       padding-inline: 1rem;
       margin-block-start: -20px;
+
       li {
+        padding-left: 0;
         @include typography(h4-mobile);
+
+        &:before {
+          display: none;
+        }
       }
     }
 
@@ -147,10 +201,6 @@
       .themeWrapper {
         width: unset;
         justify-content: flex-start;
-
-        p {
-          padding-inline: 8px;
-        }
         .line {
           width: 16px;
         }
@@ -158,9 +208,14 @@
 
       .themeList {
         padding-inline-start: 0;
+        padding-block-end: 40px;
 
         li {
           padding-inline-start: 1rem;
+
+          &:before {
+            display: none;
+          }
         }
       }
     }
